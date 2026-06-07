@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Abhinav Suyal Photography"
+version = "1.0.0"
+id = "artifacts/abhinav-suyal-photography"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 25491
+
+[services.development]
+run = "pnpm --filter @workspace/abhinav-suyal-photography run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/abhinav-suyal-photography", "run", "build" ]
+publicDir = "artifacts/abhinav-suyal-photography/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "25491"
+BASE_PATH = "/"

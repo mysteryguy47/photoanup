@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Jost:wght@300;400;500&display=swap');
+@import "tailwindcss";
+@import "tw-animate-css";
+@plugin "@tailwindcss/typography";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--bg-cream);
+  --color-foreground: var(--text-charcoal);
+  --color-border: var(--border-light);
+  --color-input: var(--border-light);
+  --color-ring: var(--bronze);
+
+  --font-sans: 'Jost', sans-serif;
+  --font-serif: 'Cormorant Garamond', serif;
+
+  --color-brand-cream: var(--bg-cream);
+  --color-brand-charcoal: var(--text-charcoal);
+  --color-brand-bronze: var(--bronze);
+  --color-brand-rust: var(--rust);
+  --color-brand-muted: var(--muted-text);
+  --color-brand-border: var(--border-light);
+  --color-brand-warm: var(--bg-warm-strip);
+  --color-brand-contact: var(--contact-bg);
+  --color-brand-footer: var(--footer-bg);
+}
+
+:root {
+  --bg-cream: #FAF7F2;
+  --text-charcoal: #2C2416;
+  --bronze: #B87333;
+  --rust: #8B4A2B;
+  --muted-text: #7A6D5A;
+  --border-light: #E5DDD0;
+  --bg-warm-strip: #F0EBE1;
+  --hero-overlay-bottom: rgba(20,10,2,0.7);
+  --hero-overlay-top: rgba(20,10,2,0.2);
+  --contact-bg: #2C1A0A;
+  --footer-bg: #1C1008;
+
+  --background: 40 33% 96%;
+  --foreground: 34 33% 13%;
+  --border: 37 36% 86%;
+  --card: 40 33% 96%;
+  --card-foreground: 34 33% 13%;
+  --card-border: 37 36% 86%;
+  --popover: 40 33% 96%;
+  --popover-foreground: 34 33% 13%;
+  --popover-border: 37 36% 86%;
+  --primary: 28 57% 46%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 40 43% 91%;
+  --secondary-foreground: 34 33% 13%;
+  --muted: 40 43% 91%;
+  --muted-foreground: 35 15% 42%;
+  --accent: 40 43% 91%;
+  --accent-foreground: 34 33% 13%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+  --input: 37 36% 86%;
+  --ring: 28 57% 46%;
+  
+  --radius: 0.25rem;
+}
+
+.dark {
+  --background: 40 33% 96%;
+  --foreground: 34 33% 13%;
+  --border: 37 36% 86%;
+  --card: 40 33% 96%;
+  --card-foreground: 34 33% 13%;
+  --card-border: 37 36% 86%;
+  --popover: 40 33% 96%;
+  --popover-foreground: 34 33% 13%;
+  --popover-border: 37 36% 86%;
+  --primary: 28 57% 46%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 40 43% 91%;
+  --secondary-foreground: 34 33% 13%;
+  --muted: 40 43% 91%;
+  --muted-foreground: 35 15% 42%;
+  --accent: 40 43% 91%;
+  --accent-foreground: 34 33% 13%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+  --input: 37 36% 86%;
+  --ring: 28 57% 46%;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+}
+
+@keyframes ken-burns {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.08); }
+}
+
+.animate-ken-burns {
+  animation: ken-burns 12s ease-in-out alternate infinite;
+}
+
+@keyframes gentle-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(8px); }
+}
+
+.animate-gentle-bounce {
+  animation: gentle-bounce 2s ease-in-out infinite;
+}
+
+.masonry-grid {
+  column-count: 2;
+  column-gap: 1rem;
+}
+@media (min-width: 768px) {
+  .masonry-grid {
+    column-count: 3;
+  }
+}
+.masonry-item {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 1rem;
+  break-inside: avoid;
+}

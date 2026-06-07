@@ -1,0 +1,146 @@
+Build a single-page website for "Abhinav Suyal Photography" — a wedding photographer based in Rohini, North Delhi with 20+ years of experience, 4.8★ Google rating, and a warm, trust-based reputation.
+
+=== THEME & SOUL ===
+
+Do NOT use a dark theme. Use a warm light theme — the palette of old Kodak film and golden-hour light. Think cream, warm off-white, antique linen, deep bronze, burnt sienna, and warm charcoal text. This is a deliberate choice to differentiate from every other dark-gold wedding photographer site.
+
+Background: #FAF7F2 (warm cream)
+Primary text: #2C2416 (warm charcoal, almost sepia)
+Accent / brand color: #B87333 (burnished bronze / copper)
+Secondary accent: #8B4A2B (rust-brown, for hover states and borders)
+Muted text: #7A6D5A
+Light border/divider: #E5DDD0
+Hero overlay tint: rgba(30, 18, 5, 0.45)
+
+=== FONTS ===
+
+Load from Google Fonts:
+- "Cormorant Garamond" (weights 300, 400, 600, italic) — for all headings, large display text, hero title
+- "Jost" (weights 300, 400, 500) — for body text, nav, labels, small caps
+
+=== LAYOUT & SECTIONS (in order) ===
+
+**1. NAVBAR (fixed, top)**
+- Left: Logo — "Abhinav Suyal" in Cormorant Garamond 20px italic, below it "Photography" in Jost 9px letter-spacing 4px uppercase bronze color
+- Right: nav links "Portfolio | Services | Reviews | Contact" in Jost 11px uppercase letter-spacing 2px
+- Background: rgba(250, 247, 242, 0.92) with backdrop-filter blur(8px)
+- A very thin 1px bottom border in the border color
+- On scroll: nav gently gains a soft box-shadow
+
+**2. HERO SECTION**
+- Full viewport height (100vh)
+- LARGE background image — use this real photo from his WeddingWire portfolio as the hero image:
+  https://cdn0.weddingwire.in/vendor/5594/3_2/1280/jpg/abhinavsuyalphotography-1617348407-2542825202537899458-268068401_15_95594-169744150983807.jpeg
+- Apply a Ken Burns animation on the image: very slow scale from 1.0 to 1.08 over 12 seconds, ease-in-out, alternate infinite — this makes the photo breathe
+- Overlay: a warm dark gradient from bottom (rgba(20,10,2,0.7)) to top (rgba(20,10,2,0.2))
+- Centered text content:
+  - Tiny eyebrow line: "Delhi NCR · Est. 2004" in Jost 10px letter-spacing 4px uppercase, color #D4A96A
+  - Main title: "Timeless Moments,<br><em>Beautifully Told</em>" in Cormorant Garamond 68px font-weight 300, color white. The em tag should render in italic.
+  - Subtext: "Candid · Cinematic · Destination Weddings" in Jost 13px letter-spacing 3px, color rgba(255,255,255,0.7)
+  - CTA button: "View Portfolio" — outlined, border 1px solid rgba(255,255,255,0.6), text white, Jost 11px letter-spacing 2px uppercase, padding 12px 32px. On hover: background becomes #B87333, border color #B87333, smooth 0.3s transition.
+- A small downward-pointing chevron at the bottom center of the hero, pulsing gently with a CSS animation, that scrolls the page down on click
+
+**3. TRUST BAR (below hero)**
+- Thin full-width strip, background #F0EBE1, a hairline border top and bottom
+- 4 stats in a horizontal row, centered, with a thin vertical divider between each:
+  - "20+" / "Years of Experience"
+  - "4.8★" / "Google Rating"  
+  - "35+" / "Google Reviews"
+  - "500+" / "Weddings Captured"
+- Numbers in Cormorant Garamond 36px color #B87333
+- Labels in Jost 10px uppercase letter-spacing 2px color #7A6D5A
+- Padding 28px 0
+
+**4. ABOUT SECTION**
+- 2-column layout (left: text, right: a portrait-style image)
+- Left column:
+  - Section label: "About Abhinav" in Jost 10px uppercase letter-spacing 3px bronze color
+  - Heading: "Two Decades of<br><em>Capturing Love</em>" in Cormorant Garamond 44px weight 300
+  - A thin 40px wide horizontal rule in bronze color, margin 16px 0
+  - Body paragraph: "For over 20 years, Abhinav Suyal has been the quiet presence at weddings across Delhi NCR — blending into the background, watching for the real moments. The stolen glance between the couple. The mother's tear. The baraat that erupts into chaos. These are the frames he lives for."
+  - Second paragraph: "Based in Rohini, working across North Delhi and beyond, Abhinav offers a complete wedding documentation service — from the mehendi evening to the bidaai — handled with professionalism, warmth, and an eye honed over two decades."
+  - Service tags below: pill-shaped tags for "Candid Wedding", "Traditional Photography", "Videography", "Pre-Wedding", "Destination Wedding", "Studio Shoots"
+  - Tags: background #F0EBE1, border 1px solid #D4A96A, text #8B4A2B, Jost 10px letter-spacing 1.5px uppercase, border-radius 100px
+- Right column: use this image:
+  https://cdn0.weddingwire.in/vendor/5594/3_2/1280/jpg/abhinavsuyalphotography-1692785163-3175634577045512255-268068401_15_95594-169744138345918.jpeg
+  Display with object-fit cover, slight border-radius 4px, and a thin bronze border
+
+**5. GALLERY SECTION**
+- Section heading centered: "Selected Work" with label above it "Portfolio"
+- Use a CSS masonry-style grid — 3 columns, with images of varying heights to create an editorial feel
+- Load these 9 real images from his portfolio (they are real CDN links that work):
+
+Image 1: https://cdn0.weddingwire.in/vendor/5594/3_2/960/jpg/abhinavsuyalphotography-1617348407-2542825202537899458-268068401_15_95594-169744150983807.jpeg
+Image 2: https://cdn0.weddingwire.in/vendor/5594/3_2/960/jpg/abhinavsuyalphotography-1647320988-2794253433692957779-268068401_15_95594-169744418969501.jpeg
+Image 3: https://cdn0.weddingwire.in/vendor/5594/3_2/960/jpg/abhinavsuyalphotography-1692785163-3175634577045512255-268068401_15_95594-169744138345918.jpeg
+Image 4: https://cdn0.weddingwire.in/vendor/5594/3_2/960/jpg/abhinavsuyalphotography-1687531506-3131563711060096298-268068401_15_95594-169744139892262.jpeg
+Image 5: https://cdn0.weddingwire.in/vendor/5594/3_2/960/jpg/abhinavsuyalphotography-1617348407-2542825202512731231-268068401_15_95594-169744151621439.jpeg
+Image 6: https://cdn0.weddingwire.in/vendor/5594/3_2/960/jpg/abhinavsuyalphotography-1615103070-2523989946926087421-268068401_15_95594-169744154697675.jpeg
+Image 7: https://cdn0.weddingwire.in/vendor/5594/3_2/960/jpg/abhinavsuyalphotography-1611799142-2496274589989423956-268068401_15_95594-169744157570524.jpeg
+Image 8: https://cdn0.weddingwire.in/vendor/5594/3_2/960/jpg/abhinavsuyalphotography-1588317755-2299298443755397975-268068401_15_95594-169744161382730.jpeg
+Image 9: https://cdn0.weddingwire.in/vendor/5594/3_2/960/jpg/abhinavsuyalphotography-1657160066-2876789607283265657-268068401_15_95594-169744441643028.jpeg
+
+- On each image: hover overlay with a warm dark tint and a small white expand icon (↗) centered
+- Images should fade in with a staggered scroll-triggered animation (IntersectionObserver)
+- The "user will add their own photos later" — leave the img src as variables/comments so they can swap easily
+
+**6. SERVICES SECTION**
+- Background: #F0EBE1 (slightly different from main bg for separation)
+- Centered heading: "What We Offer"
+- 4 service cards in a 2x2 grid (or 4 across on wide screens):
+  1. Wedding Photography — "Full-day candid and traditional coverage, from mehendi to bidaai"
+  2. Cinematography & Video — "Cinematic wedding films, highlight reels, and same-day edits"
+  3. Pre-Wedding Shoots — "Outdoor, studio, and destination pre-wedding sessions"
+  4. Destination Weddings — "We travel across India and beyond for your special day"
+- Each card: white background, thin bronze border on left side (3px), Cormorant Garamond for card title, Jost for body, subtle hover: card lifts with box-shadow 0 4px 24px rgba(184,115,51,0.12)
+- A simple relevant icon above each title using Unicode or a simple SVG (camera, film, heart, location pin)
+
+**7. REVIEWS SECTION**
+- Heading: "Words From Couples We've Photographed"
+- 3 review cards in a row, each with:
+  - Large opening quote mark (") in Cormorant Garamond 80px, color #D4A96A, opacity 0.4
+  - Review text in Cormorant Garamond italic 18px
+  - Stars (★★★★★) in bronze
+  - Reviewer source: "— Google Review" in Jost 11px
+- Use EXACTLY these three real Google reviews:
+  1. "Good photography, good sense of location... lovely people!!"
+  2. "The quality and variety of the photos Abhinav captures are excellent!!"
+  3. "Will ask you next time as well for my shoots. Thanks for your services!"
+- Below reviews: a line reading "4.8 stars · 35 Google reviews · Justdial 4.8/5 · 38 votes" in Jost 12px centered
+
+**8. CONTACT / CTA SECTION**
+- Full-width section, background a warm deep color: #2C1A0A
+- Centered content:
+  - Small label: "Book Your Date" in bronze uppercase tracking-widest
+  - Heading: "Let's Tell Your Story" in Cormorant Garamond 52px weight 300, color white, italic
+  - Subtext: "Limited slots available for the 2025–26 wedding season" in Jost 13px color rgba(255,255,255,0.6)
+  - Two buttons side by side:
+    a. "WhatsApp Us" — solid bronze background #B87333, white text, on click opens: https://wa.me/919999762091
+    b. "Call Now" — outlined white border, white text, on click opens: tel:+919999762091
+  - Below: address line "Pkt-21, Shop No. 63, Sector 15, Block F, Rohini, New Delhi 110089" in Jost 11px color rgba(255,255,255,0.4)
+
+**9. FOOTER**
+- Thin footer, background #1C1008
+- Left: logo text "Abhinav Suyal Photography" in Cormorant Garamond italic, color rgba(255,255,255,0.5)
+- Center: "© 2025 · All rights reserved"
+- Right: Instagram icon linking to @abhinavsuyalphotography
+
+=== ANIMATIONS & INTERACTIONS ===
+
+- On page load: hero text fades up in staggered sequence (eyebrow → title → subtitle → button), each with 0.15s delay between them, opacity 0 to 1 + translateY(20px) to 0, duration 0.8s ease-out
+- Ken Burns on hero image: slow infinite breathing zoom
+- Gallery images: IntersectionObserver triggers a fade-in + slight upward translate when each image enters viewport, staggered by index
+- Section headings: fade up on scroll entry
+- Service cards: subtle hover lift
+- Navbar: smooth opacity + shadow change on scroll
+- Chevron bounce: a gentle up-down CSS keyframe animation on the scroll indicator
+- All transitions: duration 0.3s–0.8s, ease curves. NOTHING should feel fast or bouncy. This is a wedding photographer, not a startup.
+
+=== TECHNICAL NOTES ===
+
+- Pure HTML + CSS + vanilla JS. No frameworks.
+- Mobile responsive: on mobile, the gallery becomes 2 columns, the about section stacks vertically, the stats bar becomes 2x2.
+- The photos are real CDN links from WeddingWire — use them directly as img src. Add comment above each: "// REPLACE WITH YOUR PHOTO"
+- Use CSS custom properties (variables) for all colors at the top of the CSS so they're easy to change
+- Smooth scroll behavior on html element
+- Font loading: use Google Fonts @import at top of CSS
